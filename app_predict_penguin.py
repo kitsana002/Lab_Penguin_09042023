@@ -19,7 +19,7 @@ tab1, tab2, tab3 = st.tabs(["Penguin Prediction", "Evaluation", "About"])
 
 with tab1:
 
-    st.head('Penguin Species Prection :) ')
+    st.header('Penguin Species Prection :) ')
 
     x1 = st.radio('Select island', island_encoder.classes_)
     x1 = island_encoder.transform([x1])[0]
@@ -39,7 +39,7 @@ with tab1:
     st.write('Predicted Species: ' , species_encoder.inverse_transform(pred)[0])
     
 with tab2:
-    st.head("Evaluate on Five Techniques")
+    st.header("Evaluate on Five Techniques")
     evaluations = pickle.load(open('evals.all.sav', 'rb'))
     
     x = evaluations.columns
